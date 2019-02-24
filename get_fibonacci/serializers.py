@@ -21,7 +21,7 @@ class SliceSerializer(Serializer):
         to = attrs["to"]
         if from_ >= to:
             raise ValidationError(
-                'The "from" field value can\'t be greater than the "to" field value'
+                'The "from" field value must be less than the "to" field value'
             )
         del attrs["from_"]
         attrs["from"] = from_
