@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+  web:
+    build:
+      context: .
+    ports:
+      - 8000:8000
+    depends_on:
+      - redis
+    environment:
+      SECRET_KEY: "=&s$r7wyuoku8c*0)(wy@15t1k6a6#lf2c)ji!@%4z6n18y(n#"
+      CACHE_URL: "redis://redis:6379/1"
+      DEBUG: "true"
+  redis:
+    image: redis

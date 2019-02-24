@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django = "*"
+django-redis = "*"
+django-cache-url = "*"
+django-rest-framework = "*"
+django-cache-memoize = "*"
+django-environ = "*"
+drf-yasg = "*"
+
+[requires]
+python_version = "3.7"
